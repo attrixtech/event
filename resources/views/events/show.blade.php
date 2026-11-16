@@ -441,7 +441,14 @@
 
     <!-- TAB 7: TICKETS -->
     <div x-show="currentTab === 'tickets'" class="space-y-4">
-        <h3 class="text-base font-extrabold text-slate-900">Ticketing Tiers & Registered Passes</h3>
+        <div class="flex items-center justify-between">
+            <h3 class="text-base font-extrabold text-slate-900">Ticketing Tiers & Registered Passes</h3>
+            <div class="flex items-center space-x-2">
+                <a href="{{ route('tickets.index', ['event_id' => $event->id]) }}" class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl shadow-sm transition">
+                    <i class="fa-solid fa-qrcode mr-1"></i> Open Gate Scanner
+                </a>
+            </div>
+        </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             @forelse ($event->ticketTypes as $tt)
                 <div class="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm space-y-2">
@@ -457,10 +464,50 @@
                 </div>
             @empty
                 <div class="col-span-full bg-white rounded-2xl p-8 border border-slate-200 text-center text-xs text-slate-400">
-                    This event does not have active public ticketing.
+                    This event does not have active public ticketing tiers.
                 </div>
             @endforelse
         </div>
+
+        @if ($event->tickets->count() > 0)
+            <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden mt-4">
+                <div class="p-4 border-b border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Issued Tickets for this Event ({{ $event->tickets->count() }})</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs">
+                        <thead class="bg-slate-50 text-slate-400 text-[11px] uppercase tracking-wider border-b border-slate-100">
+                            <tr>
+                                <th class="px-5 py-3">Ticket #</th>
+                                <th class="px-4 py-3">Attendee</th>
+                                <th class="px-4 py-3">Tier</th>
+                                <th class="px-4 py-3">Status</th>
+                                <th class="px-4 py-3 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                            @foreach ($event->tickets as $t)
+                                <tr class="hover:bg-slate-50/70">
+                                    <td class="px-5 py-3 font-mono font-bold text-slate-900">{{ $t->ticket_number }}</td>
+                                    <td class="px-4 py-3 font-semibold text-slate-900">{{ $t->holder_name }}</td>
+                                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-purple-100 text-purple-800">{{ $t->ticketType->name ?? 'Pass' }}</span></td>
+                                    <td class="px-4 py-3">
+                                        <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase {{ $t->ticket_status === 'checked_in' ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-100 text-slate-700' }}">
+                                            {{ $t->ticket_status === 'checked_in' ? 'Admitted' : 'Valid' }}
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 text-right">
+                                        <a href="{{ route('tickets.print', $t) }}" target="_blank" class="px-2 py-1 bg-slate-100 hover:bg-rose-50 text-slate-700 hover:text-rose-600 font-semibold rounded-lg border border-slate-200 transition">
+                                            <i class="fa-solid fa-print mr-1"></i> Print
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        @endif
     </div>
 
     <!-- TAB 8: BILLING & INVOICES -->

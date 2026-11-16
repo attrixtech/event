@@ -73,7 +73,10 @@ Route::middleware('auth')->group(function () {
 
     // Ticketing & QR Scanner
     Route::get('/tickets', [TicketController::class, 'index'])->name('tickets.index');
+    Route::post('/tickets', [TicketController::class, 'store'])->name('tickets.store');
+    Route::post('/tickets/types', [TicketController::class, 'storeType'])->name('tickets.types.store');
     Route::post('/tickets/verify', [TicketController::class, 'verifyTicket'])->name('tickets.verify');
+    Route::get('/tickets/{ticket}/print', [TicketController::class, 'print'])->name('tickets.print');
 
     // Reports & Analytics
     Route::get('/reports', [ReportController::class, 'index'])->name('reports.index');
