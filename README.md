@@ -1,6 +1,6 @@
 # EventFlow ERP – Enterprise Event Management Software
 
-An enterprise-grade, multi-tenant **Event Management ERP System** developed with PHP 8.3+, Laravel 11+, MySQL 8+, and Tailwind CSS. Built to power turnkey event management companies, wedding planners, corporate summit producers, live concert organizers, and venue operators.
+An enterprise-grade, multi-tenant **Event Management ERP System** developed with PHP 8.5+, Laravel 11+, MySQL 8+, and Tailwind CSS. Built to power turnkey event management companies, wedding planners, corporate summit producers, live concert organizers, and venue operators.
 
 ---
 
@@ -54,7 +54,7 @@ An enterprise-grade, multi-tenant **Event Management ERP System** developed with
 ## 🚀 Getting Started
 
 ### Prerequisites
-- PHP 8.3 or PHP 8.4
+- PHP 8.5+
 - MySQL 8.0+ (running on `127.0.0.1:3306`)
 - Composer 2.x
 

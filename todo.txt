@@ -68,7 +68,7 @@ Use the following technology stack.
 
 ### Backend
 
-- PHP 8.3+
+- PHP 8.5+
 - Latest stable Laravel version compatible with the hosting environment
 - MySQL 8+
 - Laravel Eloquent ORM
