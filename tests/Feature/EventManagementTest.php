@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Models\User;
 use App\Models\Event;
 use App\Models\Client;
@@ -11,10 +12,19 @@ use App\Models\Venue;
 use App\Models\Lead;
 use App\Models\Invoice;
 use App\Models\Ticket;
+use App\Models\TicketType;
 use Carbon\Carbon;
 
 class EventManagementTest extends TestCase
 {
+    use RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->seed();
+    }
+
     protected function getAdmin()
     {
         return User::where('role', 'super_admin')->first();
@@ -88,17 +98,34 @@ class EventManagementTest extends TestCase
         $this->assertEquals('converted', $lead->fresh()->status);
     }
 
-    public function test_ticket_qr_gate_validation(): void
+    public function test_ticket_generation_and_print_flow(): void
     {
         $admin = $this->getAdmin();
-        $ticket = Ticket::first();
-        if ($ticket) {
-            $ticket->update(['ticket_status' => 'valid', 'checked_in_at' => null]);
-            $response = $this->actingAs($admin)->post('/tickets/verify', [
-                'token' => $ticket->qr_token,
-            ]);
-            $response->assertSessionHas('success');
-            $this->assertEquals('checked_in', $ticket->fresh()->ticket_status);
-        }
+        $ticketType = TicketType::first();
+        $event = $ticketType->event;
+
+        $response = $this->actingAs($admin)->post('/tickets', [
+            'event_id' => $event->id,
+            'ticket_type_id' => $ticketType->id,
+            'holder_name' => 'Sophia Martinez',
+            'holder_email' => 'sophia@test.com',
+            'holder_phone' => '+1 555 444 3333',
+            'quantity' => 1,
+            'payment_status' => 'paid',
+        ]);
+
+        $response->assertSessionHas('success');
+        $ticket = Ticket::where('holder_name', 'Sophia Martinez')->first();
+        $this->assertNotNull($ticket);
+
+        $printResponse = $this->actingAs($admin)->get('/tickets/' . $ticket->id . '/print');
+        $printResponse->assertStatus(200);
+        $printResponse->assertSee('Sophia Martinez');
+
+        $verifyResponse = $this->actingAs($admin)->post('/tickets/verify', [
+            'token' => $ticket->qr_token,
+        ]);
+        $verifyResponse->assertSessionHas('success');
+        $this->assertEquals('checked_in', $ticket->fresh()->ticket_status);
     }
 }
