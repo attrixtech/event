@@ -1,4 +1,4 @@
-name: CI / EventFlow ERP Tests
+name: CI / thrumble.event Tests
 
 on:
   push:

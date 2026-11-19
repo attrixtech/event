@@ -23,7 +23,7 @@
         <div class="flex justify-between items-start border-b border-slate-200 pb-6 mb-6">
             <div>
                 <span class="text-[10px] font-bold tracking-widest uppercase bg-slate-900 text-white px-2 py-0.5 rounded">TAX INVOICE</span>
-                <h1 class="text-2xl font-black text-slate-900 mt-2">GrandVibe Events & Productions</h1>
+                <h1 class="text-2xl font-black text-slate-900 mt-2">thrumble.event</h1>
                 <p class="text-xs text-slate-500 mt-1">Floor 12, Crescenzo Tower, Bandra Kurla Complex, Mumbai 400051</p>
                 <p class="text-xs text-slate-500">GSTIN: 27AAACG1234F1Z5 | PAN: AAACG1234F</p>
             </div>
@@ -104,12 +104,12 @@
         <div class="p-4 bg-slate-50 rounded-lg text-slate-600 text-xs border border-slate-200 mb-6">
             <strong>Bank Coordinates for RTGS / NEFT:</strong><br>
             Bank Name: HDFC Bank Ltd | Branch: Bandra Kurla Complex, Mumbai<br>
-            Account Name: GrandVibe Events & Productions Pvt. Ltd.<br>
+            Account Name: thrumble.event<br>
             Account No: 50200012345678 | IFSC: HDFC0000060
         </div>
 
         <div class="pt-8 border-t border-slate-200 grid grid-cols-2 text-xs text-slate-500">
-            <div>Authorized Signatory<br>GrandVibe Events & Productions Pvt. Ltd.</div>
+            <div>Authorized Signatory<br>thrumble.event</div>
             <div class="text-right">Thank you for your business!</div>
         </div>
     </div>

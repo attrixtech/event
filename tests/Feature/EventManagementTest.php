@@ -34,7 +34,7 @@ class EventManagementTest extends TestCase
     {
         $response = $this->get('/login');
         $response->assertStatus(200);
-        $response->assertSee('EventFlow');
+        $response->assertSee('thrumble.event');
     }
 
     public function test_dashboard_requires_authentication(): void

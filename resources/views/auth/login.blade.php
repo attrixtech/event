@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - EventFlow ERP</title>
+    <title>Sign In - thrumble.event</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -18,7 +18,7 @@
                         <i class="fa-solid fa-crown text-amber-300"></i>
                     </div>
                     <div>
-                        <span class="font-extrabold text-2xl tracking-tight">Event<span class="text-amber-300">Flow</span></span>
+                        <span class="font-extrabold text-2xl tracking-tight">thrumble<span class="text-amber-300">.event</span></span>
                         <span class="block text-xs text-rose-200 tracking-widest uppercase">ERP 2.0</span>
                     </div>
                 </div>
@@ -46,8 +46,13 @@
                 </div>
             </div>
 
-            <div class="mt-8 pt-4 border-t border-rose-600/50 text-[11px] text-rose-200 relative z-10">
-                GrandVibe Events & Productions Pvt. Ltd. &copy; 2026
+            <div class="mt-8 pt-4 border-t border-rose-600/50 text-[11px] text-rose-200 relative z-10 space-y-1">
+                <div>thrumble.event &copy; {{ date('Y') }}</div>
+                <div class="text-[10px] text-rose-200/80">
+                    Developed by <a href="https://www.attrixtech.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition">Attrix Technologies</a>
+                    &bull;
+                    Marketing by <a href="https://www.infusionn.in" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition">Infusionn Pvt. Ltd.</a>
+                </div>
             </div>
         </div>
 
@@ -55,7 +60,7 @@
         <div class="md:col-span-7 p-8 flex flex-col justify-center">
             <div class="mb-6">
                 <h3 class="text-2xl font-bold text-white mb-1">Welcome back</h3>
-                <p class="text-xs text-slate-400">Sign in to your EventFlow ERP account or choose a demo role below.</p>
+                <p class="text-xs text-slate-400">Sign in to your thrumble.event account or choose a demo role below.</p>
             </div>
 
             @if ($errors->any())
@@ -70,7 +75,7 @@
                     <label class="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Email Address</label>
                     <div class="relative">
                         <i class="fa-solid fa-envelope absolute left-3 top-3 text-slate-500 text-xs"></i>
-                        <input type="email" name="email" value="{{ old('email', 'admin@eventflow.test') }}" required class="w-full bg-slate-800 border border-slate-700 rounded-lg pl-9 pr-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 transition">
+                        <input type="email" name="email" value="{{ old('email', 'admin@thrumble.event') }}" required class="w-full bg-slate-800 border border-slate-700 rounded-lg pl-9 pr-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 transition">
                     </div>
                 </div>
 

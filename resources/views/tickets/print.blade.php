@@ -127,7 +127,7 @@
             <div class="text-[10px] text-slate-400 border-t border-slate-100 pt-3 space-y-1">
                 <p>&bull; Present this digital or printed pass at the security turnstile for barcode/QR scanner verification.</p>
                 <p>&bull; Duplicate scans will be flagged by the gate controller and admission will be denied.</p>
-                <p>&bull; Non-refundable and subject to organizer terms. Issued by GrandVibe Events & Productions ERP.</p>
+                <p>&bull; Non-refundable and subject to organizer terms. Issued by thrumble.event.</p>
             </div>
 
         </div>

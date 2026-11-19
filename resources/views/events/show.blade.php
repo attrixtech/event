@@ -194,7 +194,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-xs text-slate-900">{{ $event->manager->name ?? 'Unassigned' }}</h4>
-                            <p class="text-[11px] text-slate-400">{{ $event->manager->phone ?? 'manager@eventflow.test' }}</p>
+                            <p class="text-[11px] text-slate-400">{{ $event->manager->phone ?? 'manager@thrumble.event' }}</p>
                         </div>
                     </div>
                 </div>

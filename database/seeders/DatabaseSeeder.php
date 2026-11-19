@@ -56,9 +56,9 @@ class DatabaseSeeder extends Seeder
     {
         // 1. Company
         $company = Company::create([
-            'name' => 'GrandVibe Events & Productions Pvt. Ltd.',
+            'name' => 'thrumble.event',
             'code' => 'GV-ENT',
-            'email' => 'contact@grandvibe-events.com',
+            'email' => 'contact@thrumble.event',
             'phone' => '+91 98200 12345',
             'address' => 'Floor 12, Crescenzo Tower, G-Block, Bandra Kurla Complex',
             'city' => 'Mumbai',
@@ -76,7 +76,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Mumbai Corporate HQ',
             'code' => 'BOM-01',
             'phone' => '+91 22 6677 8899',
-            'email' => 'mumbai@grandvibe-events.com',
+            'email' => 'mumbai@thrumble.event',
             'city' => 'Mumbai',
             'state' => 'Maharashtra',
             'address' => 'Bandra Kurla Complex, Bandra East, Mumbai 400051',
@@ -89,7 +89,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Delhi NCR Regional Hub',
             'code' => 'DEL-01',
             'phone' => '+91 11 4455 6677',
-            'email' => 'delhi@grandvibe-events.com',
+            'email' => 'delhi@thrumble.event',
             'city' => 'New Delhi',
             'state' => 'Delhi',
             'address' => 'Statesman House, Barakhamba Road, Connaught Place, New Delhi 110001',
@@ -102,7 +102,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Bangalore Tech & Innovation Hub',
             'code' => 'BLR-01',
             'phone' => '+91 80 3344 5566',
-            'email' => 'blr@grandvibe-events.com',
+            'email' => 'blr@thrumble.event',
             'city' => 'Bengaluru',
             'state' => 'Karnataka',
             'address' => '100 Feet Road, Indiranagar, Bengaluru 560038',
@@ -139,7 +139,7 @@ class DatabaseSeeder extends Seeder
             'company_id' => $company->id,
             'branch_id' => $branchMumbai->id,
             'name' => 'Vikramaditya Singhania',
-            'email' => 'admin@eventflow.test',
+            'email' => 'admin@thrumble.event',
             'phone' => '+91 98201 99999',
             'role' => 'super_admin',
             'status' => 'active',
@@ -150,7 +150,7 @@ class DatabaseSeeder extends Seeder
             'company_id' => $company->id,
             'branch_id' => $branchMumbai->id,
             'name' => 'Priya Sharma',
-            'email' => 'manager@eventflow.test',
+            'email' => 'manager@thrumble.event',
             'phone' => '+91 98202 88888',
             'role' => 'event_manager',
             'status' => 'active',
@@ -161,7 +161,7 @@ class DatabaseSeeder extends Seeder
             'company_id' => $company->id,
             'branch_id' => $branchDelhi->id,
             'name' => 'Rajesh Verma',
-            'email' => 'sales@eventflow.test',
+            'email' => 'sales@thrumble.event',
             'phone' => '+91 98203 77777',
             'role' => 'sales_executive',
             'status' => 'active',
@@ -172,7 +172,7 @@ class DatabaseSeeder extends Seeder
             'company_id' => $company->id,
             'branch_id' => $branchMumbai->id,
             'name' => 'Anita Desai',
-            'email' => 'finance@eventflow.test',
+            'email' => 'finance@thrumble.event',
             'phone' => '+91 98204 66666',
             'role' => 'accountant',
             'status' => 'active',
@@ -183,7 +183,7 @@ class DatabaseSeeder extends Seeder
             'company_id' => $company->id,
             'branch_id' => $branchMumbai->id,
             'name' => 'Rahul Oberoi',
-            'email' => 'client@eventflow.test',
+            'email' => 'client@thrumble.event',
             'phone' => '+91 98205 55555',
             'role' => 'client',
             'status' => 'active',
@@ -194,7 +194,7 @@ class DatabaseSeeder extends Seeder
             'company_id' => $company->id,
             'branch_id' => $branchMumbai->id,
             'name' => 'Farhan Qureshi',
-            'email' => 'vendor@eventflow.test',
+            'email' => 'vendor@thrumble.event',
             'phone' => '+91 98206 44444',
             'role' => 'vendor',
             'status' => 'active',
@@ -210,7 +210,7 @@ class DatabaseSeeder extends Seeder
             'employee_code' => 'EMP-001',
             'first_name' => 'Priya',
             'last_name' => 'Sharma',
-            'email' => 'manager@eventflow.test',
+            'email' => 'manager@thrumble.event',
             'phone' => '+91 98202 88888',
             'designation' => 'Senior Event Director',
             'salary' => 120000.00,
@@ -226,7 +226,7 @@ class DatabaseSeeder extends Seeder
             'employee_code' => 'EMP-002',
             'first_name' => 'Rajesh',
             'last_name' => 'Verma',
-            'email' => 'sales@eventflow.test',
+            'email' => 'sales@thrumble.event',
             'phone' => '+91 98203 77777',
             'designation' => 'Lead Client Partner',
             'salary' => 95000.00,
@@ -1230,7 +1230,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // System Settings
-        SystemSetting::create(['company_id' => $company->id, 'key' => 'company_name', 'value' => 'GrandVibe Events & Productions']);
+        SystemSetting::create(['company_id' => $company->id, 'key' => 'company_name', 'value' => 'thrumble.event']);
         SystemSetting::create(['company_id' => $company->id, 'key' => 'tax_rate_gst', 'value' => '18']);
         SystemSetting::create(['company_id' => $company->id, 'key' => 'currency_symbol', 'value' => '₹']);
         SystemSetting::create(['company_id' => $company->id, 'key' => 'default_booking_advance_percent', 'value' => '50']);

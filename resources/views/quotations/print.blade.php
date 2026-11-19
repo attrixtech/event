@@ -22,9 +22,9 @@
 
         <div class="flex justify-between items-start border-b border-slate-200 pb-6 mb-6">
             <div>
-                <h1 class="text-2xl font-black text-slate-900">GrandVibe Events & Productions</h1>
+                <h1 class="text-2xl font-black text-slate-900">thrumble.event</h1>
                 <p class="text-xs text-slate-500 mt-1">Floor 12, Crescenzo Tower, Bandra Kurla Complex, Mumbai 400051</p>
-                <p class="text-xs text-slate-500">Phone: +91 98200 12345 | Email: contact@grandvibe-events.com</p>
+                <p class="text-xs text-slate-500">Phone: +91 98200 12345 | Email: contact@thrumble.event</p>
                 <p class="text-xs font-semibold text-slate-600 mt-1">GSTIN: 27AAACG1234F1Z5</p>
             </div>
             <div class="text-right">
@@ -96,7 +96,7 @@
         @endif
 
         <div class="pt-8 border-t border-slate-200 grid grid-cols-2 text-xs text-slate-500">
-            <div>Authorized Signatory<br>GrandVibe Events & Productions</div>
+            <div>Authorized Signatory<br>thrumble.event</div>
             <div class="text-right">Client Acceptance & Signature<br>Date: _______________</div>
         </div>
     </div>

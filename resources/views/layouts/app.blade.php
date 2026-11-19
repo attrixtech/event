@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'EventFlow ERP') - Event Management ERP</title>
+    <title>@yield('title', 'thrumble.event') - Event Management ERP</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -49,7 +49,7 @@
                     <i class="fa-solid fa-crown text-base"></i>
                 </div>
                 <div x-show="sidebarOpen" class="transition-opacity duration-200">
-                    <span class="font-extrabold text-lg text-white tracking-tight">Event<span class="text-rose-500">Flow</span></span>
+                    <span class="font-extrabold text-lg text-white tracking-tight">thrumble<span class="text-rose-500">.event</span></span>
                     <span class="block text-[10px] text-slate-400 font-medium uppercase tracking-wider">Enterprise ERP</span>
                 </div>
             </a>
@@ -247,8 +247,18 @@
         @endif
 
         <!-- Main Body Content -->
-        <main class="flex-1 overflow-y-auto p-4 md:p-6 bg-slate-50">
-            @yield('content')
+        <main class="flex-1 overflow-y-auto p-4 md:p-6 bg-slate-50 flex flex-col">
+            <div class="flex-1">
+                @yield('content')
+            </div>
+            <footer class="mt-8 pt-4 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400">
+                <span>&copy; {{ date('Y') }} thrumble.event. All rights reserved.</span>
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <span>Developed by <a href="https://www.attrixtech.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-600 hover:text-rose-600 transition">Attrix Technologies</a></span>
+                    <span class="text-slate-300">&bull;</span>
+                    <span>Marketing by <a href="https://www.infusionn.in" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-600 hover:text-rose-600 transition">Infusionn Pvt. Ltd.</a></span>
+                </div>
+            </footer>
         </main>
     </div>
 
@@ -257,7 +267,7 @@
         <div class="w-64 bg-slate-900 text-white h-full p-4 flex flex-col justify-between">
             <div>
                 <div class="flex items-center justify-between pb-4 border-b border-slate-800">
-                    <span class="font-extrabold text-lg text-white">Event<span class="text-rose-500">Flow</span></span>
+                    <span class="font-extrabold text-lg text-white">thrumble<span class="text-rose-500">.event</span></span>
                     <button @click="mobileMenuOpen = false" class="text-slate-400 p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
                 </div>
                 <div class="py-4 space-y-2 text-sm">

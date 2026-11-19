@@ -1,4 +1,4 @@
-# EventFlow ERP – Enterprise Event Management Software
+# thrumble.event – Enterprise Event Management Software
 
 An enterprise-grade, multi-tenant **Event Management ERP System** developed with PHP 8.5+, Laravel 11+, MySQL 8+, and Tailwind CSS. Built to power turnkey event management companies, wedding planners, corporate summit producers, live concert organizers, and venue operators.
 
@@ -90,12 +90,12 @@ Default password for all demo accounts: `password`
 
 | Role | Name | Email | Access Scope |
 | :--- | :--- | :--- | :--- |
-| **Super Admin** | Vikramaditya Singhania | `admin@eventflow.test` | Full ERP System Access |
-| **Event Manager** | Priya Sharma | `manager@eventflow.test` | Production Staging & Run of Show |
-| **Sales Executive** | Rajesh Verma | `sales@eventflow.test` | CRM Leads & Quotations |
-| **Lead Accountant** | Anita Desai | `finance@eventflow.test` | Invoicing, Payments & Expenses |
-| **Client Portal** | Rahul Oberoi | `client@eventflow.test` | Client Self-Service Portal |
-| **Vendor Partner** | Farhan Qureshi | `vendor@eventflow.test` | Vendor Work Orders & Contracts |
+| **Super Admin** | Vikramaditya Singhania | `admin@thrumble.event` | Full ERP System Access |
+| **Event Manager** | Priya Sharma | `manager@thrumble.event` | Production Staging & Run of Show |
+| **Sales Executive** | Rajesh Verma | `sales@thrumble.event` | CRM Leads & Quotations |
+| **Lead Accountant** | Anita Desai | `finance@thrumble.event` | Invoicing, Payments & Expenses |
+| **Client Portal** | Rahul Oberoi | `client@thrumble.event` | Client Self-Service Portal |
+| **Vendor Partner** | Farhan Qureshi | `vendor@thrumble.event` | Vendor Work Orders & Contracts |
 
 *Quick-switch demo role buttons are also available on both the `/login` screen and top navigation bar.*
 
@@ -123,4 +123,9 @@ php artisan test
 
 Test coverage includes authentication, tenant isolation, event creation, status transitions, lead conversions, run of show itineraries, tasks checklists, and gate QR pass validation.
 
-# EventFlow-ERP-by-ewebotapp
+---
+
+## 🤝 Credits
+
+- **Developed by:** [Attrix Technologies](https://www.attrixtech.com)
+- **Marketing by:** [Infusionn Pvt. Ltd.](https://www.infusionn.in)

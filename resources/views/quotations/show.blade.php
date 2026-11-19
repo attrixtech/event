@@ -23,7 +23,7 @@
     <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-8 text-xs space-y-6">
         <div class="flex justify-between items-start border-b border-slate-100 pb-6">
             <div>
-                <span class="font-extrabold text-xl text-slate-900">GrandVibe Events & Productions</span>
+                <span class="font-extrabold text-xl text-slate-900">thrumble.event</span>
                 <p class="text-slate-500 mt-1">Bandra Kurla Complex, Mumbai 400051</p>
                 <p class="text-slate-400">GSTIN: 27AAACG1234F1Z5</p>
             </div>
